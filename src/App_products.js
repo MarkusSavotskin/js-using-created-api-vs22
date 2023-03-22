@@ -53,12 +53,12 @@ function App() {
             <label>Aktiivne</label> <br />
             <input ref={isActiveRef} type="checkbox" /> <br />
             <button onClick={() => lisa()}>Lisa</button>
-            {tooted.map((toode, index) =>
+            {tooted.map((toode) =>
                 <div>
                     <div>{toode.id}</div>
                     <div>{toode.name}</div>
                     <div>{toode.price}</div>
-                    <button onClick={() => kustuta(index)}>x</button>
+                    <button onClick={() => kustuta(toode.id)}>x</button>
                 </div>)}
             <button onClick={() => dollariteks()}>Muuda dollariteks</button>
         </div>
